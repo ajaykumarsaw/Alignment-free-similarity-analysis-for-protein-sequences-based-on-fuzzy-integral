@@ -1,0 +1,30 @@
+# Format of the Protein sequence file is as follow: Odd line contains sequence names and even line contains protein  sequences (eg:-ND5line.fas)
+
+# check the maximum length among the  Protein  sequences and add 10 more array in maximum length in program.
+
+$ wc -L ND5line.fas
+610 ND5line.fas
+
+# here maximum length of among ND5line.fas protein sequences is 610. Therefore assign maximum length in program is = 610 + 10= 620
+
+# first run executable file as follow and you will get instruction related to input file and follow instruction:
+
+
+$ ./feature_extraction_protein
+Enter Two arguments. 1_path_of_input_file  2_maximum_length_of_Protein_sequences
+
+$ ./feature_extraction_protein  ND5line.fas 620 > feature_extraction_protein.txt
+
+
+$ ./similarity_protein
+Enter Three arguments. 1_path_of_input_file  2_number_of_Protein_sequences 3_assign_number_of_Thread
+
+./similarity_protein  feature_extraction_protein.txt  9 2 > similarity_protein.txt
+
+
+$ ./phylip
+Enter Four  arguments: 1_number_of_Protein_sequences  2_maximum_length_among_protein_sequences 3_input_path_file 4_sequence_file
+
+./phylip  9 620 similarity_protein.txt ND5line.fas > phylip.txt
+
+# Put phylip.txt in the phylip package and use Fitch-Margoliash approach or  UPGMA approach, you will get phylogenetic tree. Details discussionare  given in  Result section of the paper.
