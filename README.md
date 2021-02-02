@@ -1,5 +1,5 @@
 # Alignment-free-similarity-analysis-for-protein-sequences-based-on-fuzzy-integral  Sequence Similarity Tool
-# Code are available in Protein_Source Code.tar.gz
+# Codes are available in Protein_Source Code.tar.gz
 
 # Format of the Protein sequence file is as follow: Odd line contains sequence names and even line contains protein  sequences (eg:-ND5line.fas)
 
